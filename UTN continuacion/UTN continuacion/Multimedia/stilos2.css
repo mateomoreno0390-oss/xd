@@ -1,0 +1,147 @@
+/* Estilos generales y variables */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+:root {
+    --color-dark-background: #1a1a1a;
+    --color-text-light: #f0f0f0;
+    --color-accent-pink: #FF69B4; /* Fucsia */
+    --color-accent-purple: #6a006a; /* Púrpura oscuro */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
+}
+
+/* --- Estilos Generales --- */
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--color-dark-background);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    display: flex; /* Centrar el formulario */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 450px; /* Ancho máximo para mejor visualización */
+}
+
+
+/* Área del formulario */
+.form_area {
+    background-color: var(--color-accent-purple); /* Púrpura de fondo */
+    border: 2px solid var(--color-accent-pink); /* Borde Fucsia */
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada para efecto 3D */
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre elementos */
+}
+
+/* Título del formulario */
+.title-form {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--color-text-light); /* Blanco claro para alto contraste */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Subtítulos (etiquetas) */
+.sub_title_form {
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+/* Grupo de campos */
+.form_group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Pequeño espacio entre label y input */
+}
+
+/* Estilo de los campos de entrada */
+.form_style {
+    outline: none;
+    border: 2px solid var(--color-text-light); /* Borde blanco para resaltar */
+    background-color: #333; /* Fondo más oscuro para los inputs */
+    color: var(--color-text-light);
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form_style::placeholder {
+    color: #aaa;
+}
+
+.form_style:focus {
+    border-color: var(--color-accent-pink); /* Borde fucsia al enfocar */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de envío */
+.btn-sign {
+    width: 100%;
+    padding: 15px;
+  
+    background-color: var(--color-accent-pink); /* Fucsia vibrante */
+    color: var(--color-dark-background); /* Texto oscuro para alto contraste */
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 4px 0px 0px #b43a91; /* Sombra del color del borde */
+    transition: all 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn-sign:hover {
+    background-color: #f584c3; /* Tono más claro al pasar el mouse */
+    box-shadow: 0px 2px 0px 0px #b43a91;
+    transform: translateY(2px);
+}
+
+/* Enlace de login */
+.link {
+    font-weight: 600;
+    color: var(--color-accent-pink); /* Enlace fucsia */
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #f584c3;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ddd;
+    margin-top: 15px;
+}

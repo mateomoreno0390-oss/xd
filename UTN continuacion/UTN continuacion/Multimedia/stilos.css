@@ -1,0 +1,1054 @@
+*{
+    margin: 2px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --color-dark-background: #1a1a1a; /* Fondo principal oscuro */
+    --color-text-light: #ffffff; /* Texto claro principal */
+    --color-accent-pink: #FF69B4; /* Un rosa para acentos*/
+    --color-grey-text: #bbb0b0c4; /* Texto gris para párrafos */
+    --color-nav-background: #831083c2; /* Fondo de la barra de navegación */
+    --color-search-background: #000000; /* Fondo para la barra de búsqueda */
+    --color-search-border: #5c0372; /* Borde del buscador */
+
+    --font-primary: 'Montserrat', sans-serif; /* Para títulos principales */
+    --font-secondary: 'Open Sans', sans-serif; /* Para párrafos y texto general */
+
+    --padding-section-lg: 80px;
+    --padding-section-md: 50px;
+    --padding-section-sm: 30px;
+    --gap-grid: 40px;
+}
+
+/* --- Estilos Generales --- */
+body {
+    margin: 0;
+    font-family: var(--font-secondary);
+    background-color: var(--color-dark-background);
+    color: var(--color-text-light);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--color-text-light);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    line-height: 1;
+}
+
+p {
+    margin-bottom: 10px;
+    color: var(--color-grey-text); /* Color para párrafos */
+}
+
+a {
+    color: var(--color-nav-background);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent-pink);
+}
+
+strong {
+    color: var(--color-text-light); /* Para destacar texto en negrita */
+}
+
+/* --- Cabecera (Buscador y Navegación) --- */
+.main-header {
+    background-color: var(--color-dark-background);
+}
+
+.search-and-filter-bar {
+    background-color: var(--color-dark-background);
+    padding: 20px 0; /* Más espacio para el buscador */
+    display: flex;
+    justify-content: center; /* Centra el buscador horizontalmente */
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ---Diseño del Buscador --- */
+.search-box-custom {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-search-background);
+    border: 2px solid var(--color-search-border); /* Borde más visible */
+    border-radius: 30px; /* Más redondeado */
+    padding: 8px 20px; /* Más padding interno */
+    width: 100%;
+    max-width: 600px; /* Un poco más ancho para el buscador */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para destacarlo */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box-custom:focus-within { /* Estilo cuando el input está enfocado */
+    border-color: var(--color-nav-background); /* Borde de color al enfocar */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(138, 43, 226, 0.2); /* Sombra y halo */
+}
+
+.search-box-custom input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: var(--color-text-light);
+    padding: 5px 10px;
+    font-size: 1.1em; /* Texto un poco más grande */
+    outline: none;
+}
+
+.search-box-custom input[type="text"]:focus:placeholder {
+    color: var(--color-grey-text);
+    opacity: 0.5;
+}
+
+.search-icon, .filter-icon {
+    color: var(--color-grey-text); /* Color para los iconos */
+    font-size: 28px; /* Tamaño de los iconos */
+    margin-right: 10px;
+}
+
+.filter-btn-custom {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; /* Elimina padding por defecto del botón */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-grey-text); /* Color del icono del botón */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn-custom:hover {
+    color: var(--color-nav-background); /* Color al pasar el ratón */
+    transform: scale(1.1);
+}
+
+.main-nav {
+    background-color: var(--color-nav-background); /* Color del menú de navegación */
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav .container ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos de navegación */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.main-nav ul li {
+    margin: 0 20px; /* Espacio entre los elementos del menú */
+}
+
+.main-nav ul li a {
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--color-accent-pink); /* Resalta al pasar el ratón */
+}
+
+/*Sección Principal de Contenido (Bienvenida y Columnas)*/
+.main-content-area {
+    padding-top: var(--padding-section-lg);
+    padding-bottom: var(--padding-section-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-and-columns-section {
+    display: grid;
+    /* Ajustamos el grid para el GIF:
+       - Fila 1: Títulos (hero-text-wrapper)
+       - Fila 2: GIF (sound-wave-gif-container-alt)
+       - Fila 3: Columnas de texto (content-grid)
+       Estas serán las áreas en el grid.
+    */
+    grid-template-areas:
+        "hero-titles"
+        "gif-area"
+        "content-columns";
+    gap: var(--gap-grid); /* Espacio entre las áreas */
+    align-items: start;
+}
+
+/* Asignar áreas al grid */
+.hero-text-wrapper {
+    grid-area: hero-titles;
+    align-self: flex-start;
+    padding-right: 20px;
+}
+
+/* --- ANIMACION de la Barra de Sonido --- */
+.center_div {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+ position: relative;
+ left: 10%;
+}
+
+.wave {
+  width: 1.8rem;
+  height: 150px;
+  background-color: #ff6b6b;
+  margin: 4px;
+  border-radius: 0.4rem;
+  animation: wave 1.5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(0);
+    filter: hue-rotate(90deg) blur(100px);
+  }
+  25% {
+    transform: scale(0);
+    filter: hue-rotate(120deg) blur(50px);
+  }
+  50% {
+    transform: scale(1);
+    filter: hue-rotate(180deg) blur(25px);
+  }
+  25% {
+    transform: scale(0);
+    filter: hue-rotate(360deg) blur(2px);
+  }
+  100% {
+    transform: scale(0);
+    filter: hue-rotate(0deg) blur(0);
+  }
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+
+
+.content-grid {
+    grid-area: content-columns; /* Área para las columnas de texto */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-text-wrapper h1 {
+    font-size: 4em;
+    line-height: 1.0;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.hero-text-wrapper h1 span {
+    display: block;
+}
+
+.hero-text-wrapper h2 {
+    font-size: 2.8em;
+    color: var(--color-accent-purple);
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: var(--gap-grid); /* Espacio entre h2 y el GIF/columnas */
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================= */
+/* --- Footer Mejorado con Grid --- */
+/* ============================= */
+
+.main-footer-custom {
+    position: relative;
+    background-color: var(--color-nav-background); 
+    color: var(--color-text-light);
+    padding: 60px;
+    border-top: 4px solid var(--color-accent-purple);
+
+    /* Usamos Grid en lugar de Flex */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; /* 🔹 Espacio entre columnas */
+}
+
+
+
+/* ============================= */
+/* --- Sección de Contacto --- */
+/* ============================= */
+
+.footer-contact-info {
+    max-width: 600px;
+    color: #f0f0f0;
+}
+
+.footer-contact-info p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+.footer-contact-info a {
+    color: var(--color-accent-pink);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+    color: #f584c3;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* --- Redes Sociales --- */
+/* ============================= */
+
+.footer-social-media h3 {
+    font-family: var(--font-primary);
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: column; /* Título arriba, íconos debajo */
+    align-items: flex-start; /* Todo alineado al inicio de la columna */
+}
+
+.social-icons {
+    display: flex;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 30%;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.social-icons img:hover {
+  transform: scale(1.20) rotate(2deg);
+}
+
+/* ============================= */
+/* --- Links de Interés --- */
+/* ============================= */
+
+
+.links-footer h3 {
+    color:#f0f0f0;
+    margin-bottom: 15px;
+}
+
+.links-footer p a {
+    color:#b3b3b3; /* Texto más oscuro para contraste */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links-footer p a:hover {
+    color: var(--color-accent-pink);
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* --- Newsletter --- */
+/* ============================= */
+
+.newsletter {
+    color: #f0f0f0;
+}
+
+.letter-container {
+  position: relative;
+  width: 250px;
+ 
+}
+
+.brutalist-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color:#000000;
+  background-color: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.brutalist-input:focus {
+  animation: focus-pulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite,
+    glitch 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+.brutalist-input:focus::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: white;
+  z-index: -1;
+}
+
+.brutalist-input:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:#ffffff;
+  z-index: -2;
+  clip-path: inset(0 100% 0 0);
+  animation: glitch-slice 4s steps(2, end) infinite;
+}
+
+@keyframes glitch-slice {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  10% {
+    clip-path: inset(0 5% 0 0);
+  }
+  20% {
+    clip-path: inset(0 80% 0 0);
+  }
+  30% {
+    clip-path: inset(0 10% 0 0);
+  }
+  40% {
+    clip-path: inset(0 50% 0 0);
+  }
+  50% {
+    clip-path: inset(0 30% 0 0);
+  }
+  60% {
+    clip-path: inset(0 70% 0 0);
+  }
+  70% {
+    clip-path: inset(0 15% 0 0);
+  }
+  80% {
+    clip-path: inset(0 90% 0 0);
+  }
+  90% {
+    clip-path: inset(0 5% 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+
+
+.brutalist-input:focus {
+  transform: rotate(0deg) scale(1.05);
+  background-color:#ffffff;
+}
+
+.smooth-type {
+  position: relative;
+  overflow: hidden;
+}
+
+.smooth-type::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.smooth-type:focus::before {
+  opacity: 1;
+  animation: type-gradient 2s linear infinite;
+}
+
+@keyframes type-gradient {
+  0% {
+    background-position: 300px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.brutalist-input::placeholder {
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.brutalist-input:focus::placeholder {
+  color: transparent;
+}
+
+.brutalist-input:focus {
+  animation: focus-pulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
+}
+
+@keyframes focus-pulse {
+  0%,
+  100% {
+    border-color:  #FF69B4;
+  }
+  50% {
+    border-color:#ffffff;
+  }
+}
+
+/* ============================= */
+/* --- Copyright --- */
+/* ============================= */
+
+.copyright {
+    grid-column: 1 / -1; /* Se extiende por todo el ancho */
+    text-align: center;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    margin-top: 20px;
+}
+
+/* ============================= */
+/* --- Media Queries --- */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .main-footer-custom {
+        grid-template-columns: 1fr; /* Una sola columna en mobile */
+        gap: 30px;
+        padding: 30px 15px;
+    }
+
+    .social-icons img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+ 
+/* --- NUEVA SECCIÓN: Todas las categorías de Vinilos --- */
+
+/* Estilos para el contenedor de los botones */
+.button-container {
+    display: flex; /* Para que los elementos internos se coloquen en fila */
+    justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos */
+    background-color: #5b0060; /* El color morado que se ve en la imagen */
+  
+    border-radius: 15px; /* Bordes redondeados para el contenedor principal */
+    width: 200px;
+    margin-left: auto; /* Para centrar el contenedor horizontalmente si tiene un ancho fijo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el enlace que envuelve cada botón */
+.nav-icon-link {
+    text-decoration: none; 
+    color: inherit; /* Hace que el color del texto y los iconos hereden del padre o de .iconbuy */
+    display: flex;
+}
+
+/* Estilos para los botones dentro de los enlaces */
+.buttonbuy {
+    background-color: transparent; /* Hace el fondo del botón transparente para que se vea el fondo del contenedor */
+    border: none; /* Elimina el borde por defecto del botón */
+    padding: 10px 15px; /* Ajusta el padding para el área clicable de cada botón */
+    cursor: pointer; /* Cambia el cursor para indicar que es clicable */
+    display: flex; /* Para centrar el SVG dentro del botón */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto hover para los botones */
+.buttonbuy:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Un ligero cambio de fondo al pasar el ratón */
+    border-radius: 10px; /* Si quieres que el efecto hover tenga bordes redondeados */
+}
+
+/* Estilos para los iconos SVG */
+.iconbuy {
+    font-size: 24px; /* Tamaño del icono */
+    color: #fff; /* Color blanco para los iconos */
+    /* Las propiedades fill="currentColor" y stroke="currentColor" en el SVG harán que herede este color */
+}
+
+.product-categories-section {
+    background-color: var(--color-dark-background); /* Fondo oscuro */
+    padding: var(--padding-section-lg) 0; /* Padding superior e inferior */
+    text-align: center; /* Centra el título de la sección */
+}
+
+.product-categories-section h2 {
+    color: var(--color-text-light); /* Color del título de la sección */
+    margin-bottom: var(--padding-section-md); /* Espacio debajo del título */
+    font-size: 2.8em;
+}
+
+.product-grid {
+    display: grid;
+    /* Columnas responsivas: mínimo 250px, máximo 1fr. Se ajustan automáticamente. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espacio entre los items de la cuadrícula */
+    justify-items: center; /* Centra los items dentro de sus celdas */
+    align-items: start; /* Alinea los items al inicio de sus celdas */
+}
+
+.product-item {
+    background-color: rgba(255, 255, 255, 0.07); /* Fondo ligeramente más claro para cada producto */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Asegura que ocupe el ancho disponible en su celda */
+    max-width: 280px; /* Ancho máximo para cada tarjeta de producto */
+    display: flex; /* Usamos flexbox para organizar el contenido interno */
+    flex-direction: column; /* Contenido apilado verticalmente */
+    align-items: center; /* Centra el contenido (imagen, texto) */
+    text-align: center; /* Centra el texto */
+}
+
+.product-item:hover {
+    transform: translateY(-8px); /* Efecto de levantamiento al pasar el ratón */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.product-item img {
+    width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+    max-width: 250px; /* Tamaño máximo para la imagen del vinilo */
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+    margin-bottom: 15px;
+    border: 2px solid var(--color-accent-purple); /* Borde para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+}
+
+.product-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+}
+
+.product-artist {
+    font-size: 1em;
+    color: var(--color-grey-text);
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--color-accent-pink); /* Un color vibrante para el precio */
+    margin-top: auto; /* Empuja el precio y el botón hacia abajo */
+    margin-bottom: 15px;
+}
+
+.button {
+  --width: 150px;
+  --height: 50px;
+  --tooltip-height: 150px;
+  --tooltip-width: 140px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #9c28e3;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+.add-to-cart-btn {
+    background-color: var(--color-accent-purple);
+    color: var(--color-text-light);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 80%; /* Ancho del botón */
+    max-width: 200px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: var(--color-accent-pink);
+    transform: translateY(-2px);
+}
+
+
+/* --- Media Queries para la nueva sección de productos --- */
+@media (max-width: 768px) {
+    .product-categories-section h2 {
+        font-size: 2.2em;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más pequeñas en tablet */
+        gap: 20px;
+    }
+    .product-item {
+        padding: 15px;
+    }
+    .product-item img {
+        max-width: 180px;
+    }
+    .product-title {
+        font-size: 1.2em;
+    }
+    .product-artist {
+        font-size: 0.9em;
+    }
+    .product-price {
+        font-size: 1.2em;
+    }
+    .add-to-cart-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-categories-section h2 {
+        font-size: 1.8em;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+        gap: 25px;
+    }
+    .product-item {
+        max-width: 280px; /* Mantener un ancho máximo para la tarjeta */
+        margin: 0 auto; /* Centrar la tarjeta */
+    }
+}
+
+/* Estilos generales para el contenedor principal de la sección */
+
+.artistas-section {
+padding-top: 80px;
+min-height: 100vh;
+padding-bottom: 80px;
+}
+
+
+
+/* Contenedor que alinea las tarjetas de los artistas (Flexbox) */
+
+.artistas-contenedor {
+ display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+gap: 30px;
+}
+
+
+
+/* Estilos para todas las tarjetas de artistas (cerati, otro-artista, etc.) */
+
+.artista-card {
+position: relative;
+background-color: rgba(255, 255, 255, 0.07);
+color: #fff;
+border-radius: 15px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+padding: 40px;
+text-align: center;
+flex-basis: 300px;
+transition: transform 0.3s ease;
+}
+
+
+/* Efecto de elevación al pasar el mouse sobre la tarjeta */
+
+.artista-card:hover {
+transform: translateY(-10px);
+
+}
+
+
+
+/* Estilos de los elementos de texto dentro de la tarjeta */
+
+.artista-card h2 {
+font-size: 2em;
+color: #fff;
+margin-bottom: 10px;
+
+}
+
+
+
+.artista-card p {
+font-size: 1.1em;
+color: #b3b3b3;
+margin-bottom: 25px;
+}
+
+
+
+/* Estilos del enlace "Escuchar en Spotify" */
+
+.enlace-artista {
+display: inline-block;
+color: #FF69B4;
+ text-decoration: none;
+ font-weight: bold;
+padding: 12px 25px;
+ transition: color 0.3s ease;
+
+}
+
+.enlace-artista:hover {
+ color: #FF69B4;
+
+}
+
+
+
+/* Contenedor del pop-up (inicialmente oculto y posicionado) */
+
+.preview-popup {
+ visibility: hidden;
+ opacity: 0;
+ position: absolute;
+top: -380px;
+left: 50%;
+transform: translateX(-50%);
+background-color:rgba(255, 255, 255, 0.07);
+padding: 10px;
+border-radius: 10px;
+ width: 350px;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+transition: opacity 0.4s ease, visibility 0.4s ease, top 0.4s ease;
+z-index: 10;
+
+}
+
+/* Muestra el pop-up al pasar el mouse sobre la tarjeta */
+
+.artista-card:hover .preview-popup {
+visibility: visible;
+opacity: 1;
+top: -390px;
+
+}
+
+/* Estilo del iframe para que coincida con el pop-up */
+
+.preview-popup iframe {
+border-radius: 8px;
+
+}
+.infous{
+  padding:80px;
+    min-height: 100vh;
+
+}
+.info-data{
+text-align: center;
+min-width: 20vh ;
+}

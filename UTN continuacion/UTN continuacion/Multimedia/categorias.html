@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Groover - Donde el Ritmo No Tiene Fronteras</title>
+    <link rel="stylesheet" href="stilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <!--BUSCADOR DE LA PAGINA-->
+    <header class="main-header">
+        <div class="search-and-filter-bar container">
+            <div class="search-box-custom">
+                <span class="material-icons search-icon">search</span> <input type="text" placeholder="Buscar vinilos, artistas, géneros...">
+                <button class="filter-btn-custom" aria-label="Filtro">
+                    <span class="material-icons filter-icon">tune</span> </button>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="categorias.html">Vinilos</a></li>
+                    <li><a href="artistas.html">Artistas</a></li>
+                    <li><a href="info.html">Acerca de nosotros</a></li>
+                    <li><a href="registrarse.html">Iniciar sesión</a></li>
+                
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--PRINCIPIO DE LA PAGINA CATEGORIAS DE VINILOS-->
+<section class="product-categories-section">
+        <div class="container">
+                  <!--BARRA DE BOTONES PARA ADMINISTRAR CARRITO DE COMPRAS-->
+        <div class="button-container">
+          
+            <a href="index.html" class="nav-icon-link"> 
+             
+              <button class="buttonbuy">
+            
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 1024 1024" stroke-width="0" fill="currentColor" stroke="currentColor" class="iconbuy">
+                        <path d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z"></path>
+                    </svg>
+                </button>
+            </a>
+      
+
+     <a href="registrarse.html" class="nav-icon-link">
+
+      <button class="buttonbuy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0" fill="currentColor" stroke="currentColor" class="iconbuy">
+          <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"></path>
+        </svg>
+      </button>
+    </a>
+
+
+      <button class="buttonbuy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="iconbuy">
+          <circle r="1" cy="21" cx="9"></circle>
+          <circle r="1" cy="21" cx="20"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!--TITULO DE PAGINA-->
+            <h2>Todas las categorías de vinilos</h2>
+
+    
+    <!--VINILOS ORDENADOS CON SUS PRECIOS, NOMBRES Y ARTISTAS-->
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Acido argentino Hermetica.jpg" alt="Portada de Vinilo 1">
+                    <h3 class="product-title">Acido Argentino</h3>
+                    <p class="product-artist">Hermética</p>
+                    <p class="product-price">$ 44.990</p>
+                   <div data-tooltip="Price:$ 44.990" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Ahi vamos Gustavo cerati.jpg" alt="Portada de Vinilo 2">
+                    <h3 class="product-title">Ahí vamos</h3>
+                    <p class="product-artist">Gustavo Cerati</p>
+                    <p class="product-price">$ 45.500</p>
+                     <div data-tooltip="Price:$ 45.500" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Alma diamante Spinetta.jpg" alt="Portada de Vinilo 3">
+                    <h3 class="product-title">Alma diamante</h3>
+                    <p class="product-artist">Spinetta</p>
+                    <p class="product-price">$ 39.999</p>
+                     <div data-tooltip="Price:$ 39.999" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Amor Amarillo Gustavo cerati.jpg" alt="Portada de Vinilo 4">
+                    <h3 class="product-title">Amor Amarillo</h3>
+                    <p class="product-artist">Gustavo Cerati</p>
+                    <p class="product-price">$ 30.000</p>
+                  <div data-tooltip="Price:$ 30.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Around the fur Deftones.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Around the fur</h3>
+                    <p class="product-artist">Deftones</p>
+                    <p class="product-price">$ 38.000</p>
+                    <div data-tooltip="Price:$ 38.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/clics mordenos Charly garcia.jpg" alt="Portada de Vinilo 6">
+                    <h3 class="product-title">Clics Modernos</h3>
+                    <p class="product-artist">Charly Garcia</p>
+                    <p class="product-price">$ 35.000</p>
+                  <div data-tooltip="Price:$35.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                      <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Como conseguir chicas Charly garcia.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Como conseguir chicas</h3>
+                    <p class="product-artist">Charly Garcia</p>
+                    <p class="product-price">$ 37.000</p>
+                    <div data-tooltip="Price:$ 37.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                      <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Filosifia barata Charly Garcia.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Filosofía barata</h3>
+                    <p class="product-artist">Charly Garcia</p>
+                    <p class="product-price">$ 38.000</p>
+                    <div data-tooltip="Price:$ 38.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/follow the leader Korn.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Follow the leader</h3>
+                    <p class="product-artist">Korn</p>
+                    <p class="product-price">$ 48.900</p>
+                    <div data-tooltip="Price:$ 48.900" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Fuerza natural Gustavo certai.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Fuerza natural</h3>
+                    <p class="product-artist">Gustavo Cerati</p>
+                    <p class="product-price">$ 36.000</p>
+                    <div data-tooltip="Price:$ 36.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/hot dog limp bizkit.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Hot dog</h3>
+                    <p class="product-artist">Limp bizkit</p>
+                    <p class="product-price">$ 34.990</p>
+                    <div data-tooltip="Price:$ 34.990" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Kamikaze Spinetta.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Kamikaze</h3>
+                    <p class="product-artist">Spinetta</p>
+                    <p class="product-price">$ 38.000</p>
+                    <div data-tooltip="Price:$ 38.000" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/diamond eyes.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Diamond Eyes</h3>
+                    <p class="product-artist">Deftones</p>
+                    <p class="product-price">$ 36.590</p>
+                    <div data-tooltip="Price:$ 36.590" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/significant other Limp Bizkit.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Significant other</h3>
+                    <p class="product-artist">Limp Bizkit</p>
+                    <p class="product-price">$ 44.500</p>
+                    <div data-tooltip="Price:$ 44.500" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/vulgar display of power Pantera.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Vulgar display of power</h3>
+                    <p class="product-artist">Pantera</p>
+                    <p class="product-price">$ 40.999</p>
+                    <div data-tooltip="Price:$ 40.999" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Hybrid theory Likin Park.jpg" alt="Portada de Vinilo 5">
+                    <h3 class="product-title">Hybrid theory</h3>
+                    <p class="product-artist">Linkin Park</p>
+                    <p class="product-price">$ 35.999</p>
+                    <div data-tooltip="Price:$ 35.999" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Kamikaze Spinetta.jpg" alt="Portada de Vinilo 6">
+                    <h3 class="product-title">Peluson of Milk</h3>
+                    <p class="product-artist">Spinetta</p>
+                    <p class="product-price">$ 45.990</p>
+                    <div data-tooltip="Price:$ 45.990" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Parte de la religion Charly Garcia.jpg" alt="Portada de Vinilo 7">
+                    <h3 class="product-title">Parte de la religión</h3>
+                    <p class="product-artist">Charly García</p>
+                    <p class="product-price">$ 38.999</p>
+                    <div data-tooltip="Price:$ 38.999" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Victimas del vaciamiento.jpg" alt="Portada de Vinilo 8">
+                    <h3 class="product-title">Víctimas del vaciamiento</h3>
+                    <p class="product-artist">Hermética</p>
+                    <p class="product-price">$ 32.889</p>
+                    <div data-tooltip="Price:$ 32.889" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/korn.jpg" alt="Portada de Vinilo 9">
+                    <h3 class="product-title">Korn</h3>
+                    <p class="product-artist">Korn</p>
+                    <p class="product-price">$ 35.900</p>
+                    <div data-tooltip="Price:$ 35.900" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/vulgar display of power Pantera.jpg" alt="Portada de Vinilo 10">
+                    <h3 class="product-title">Vulgar display of power</h3>
+                    <p class="product-artist">Pantera</p>
+                    <p class="product-price">$ 30.500</p>
+                    <div data-tooltip="Price:$ 30.500" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/yendo de la cama al living Charly garcia.jpg" alt="Portada de Vinilo 11">
+                    <h3 class="product-title"><span style="font-size: 18px;">Yendo de la cama al living</span></h3>
+                    <p class="product-artist">Charly García</p>
+                    <p class="product-price">$ 36.990</p>
+                    <div data-tooltip="Price:$ 36.990" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Ya no mires atras Spinetta.jpg" alt="Portada de Vinilo 12">
+                    <h3 class="product-title">Ya no mires atrás</h3>
+                    <p class="product-artist">Spinetta</p>
+                    <p class="product-price">$ 39.999</p>
+                    <div data-tooltip="Price:$ 39.999" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+
+                    <div class="product-item">
+                    <img src="../Imagenes/Galeria de vinilos/Tango 4 Charly Garcia.jpg" alt="Portada de Vinilo 13">
+                    <h3 class="product-title">Tango 4</h3>
+                    <p class="product-artist">Charly García</p>
+                    <p class="product-price">$ 37.700</p>
+                    <div data-tooltip="Price:$ 37.700" class="button">
+                    <div class="button-wrapper">
+                      <div class="text"><strong>Comprar ahora</strong></div>
+                      <span class="icon">
+                      <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path></svg></span>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                
+        </div>
+    </section>
+
+
+</div>
+    <!--PIE DE PAGINA CON INFO DE LAS REDES-->
+
+<footer class="main-footer-custom">
+
+  <!-- Contacto -->
+  <div class="footer-contact-info">
+    <h3><span style="font-size: 20px;">Contactanos</span></h3>
+    <p>Correo electrónico: 
+      <a href="mailto:globalgroover@gmail.com">globalgroover@gmail.com</a>
+    </p>
+    <p>Dirección: Villegas 371, Ciudad Autónoma de Buenos Aires</p>
+    <p>Teléfono: 
+      <a href="tel:+542994018576">+54 2994018576</a>
+    </p>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="footer-social-media">
+    <h3><span style="font-size: 20px;">Nuestras Redes Sociales</span></h3>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/" aria-label="Instagram">
+        <img src="../Imagenes/instagram 64 pixeles.png" alt="Instagram">
+      </a>
+      <a href="https://www.tiktok.com/" aria-label="TikTok">
+        <img src="../Imagenes/tik-tok (1).png" alt="TikTok">
+      </a>
+      <a href="https://www.facebook.com/?locale=es_LA" aria-label="Facebook">
+        <img src="../Imagenes/facebook.png" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <!-- Links de Interés -->
+  <div class="links-footer">
+    <h3><span style="font-size: 20px;">Links de Interés</span></h3>
+    <p><a href="politicadereventa.html">Política de Reventa</a></p>
+    <p><a href="terminos.html">Términos y Condiciones</a></p>
+    <p><a href="tips.html">Tips del Vinilo</a></p>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h3><span style="font-size: 20px;">Suscribite a Nuestro Newsletter</span></h3>
+    <p>Dejanos tu mail y mandanos tus comentarios por aquí</p>
+    <div class="letter-container">
+  <input
+    placeholder="Escribe aquí"
+    class="brutalist-input smooth-type"
+    type="text"
+  />
+ 
+</div>
+
+  </div>
+
+</footer>
+
+
+ <p class="copyright">© 2025 Global Groover. Todos los derechos reservados</p>
+
+</body>
+</html>
